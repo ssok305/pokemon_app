@@ -11,7 +11,9 @@ function Index(props){
             <ul>
             {props.pokemon.map((pokemon, index) => 
                 <li key={index}>
-                    {capitalizeFirstLetter(pokemon.name)}
+                    <a href = {`/pokemon/${index}`}> 
+                        {capitalizeFirstLetter(pokemon.name)} 
+                    </a>
                 </li>
             )}
             </ul>
