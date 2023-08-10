@@ -1,10 +1,18 @@
 const pokemon = require('../models/pokemon');
 
-function index  (req, res)  {
-    res.render('./Index', { pokemon })
+const index = (req, res) => {
+    res.render('/pokemon/Index', { pokemon })
+}
+
+function hello (req,res){
+    res.render(pokemon);
 }
 
 
-module.exports = {
-    index
+module.exports.index = (req, res) => {
+    res.render('pokemon/Index', { pokemon })
 }
+// module.exports = {
+//     hello,
+//     index
+// }
